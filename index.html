@@ -11,19 +11,26 @@
 </head>
 
 <body>
-    <div id="ball-box"></div>
-    <div id="list">
-        <h1 class="list-title">Your lots</h1>
-        <i class="flaticon-close"></i>
+    <div class="photo-layer"></div>
+    <div class="wrapper">
+        <div class="official-draw">
+            <h2 class="text">Oficjalne losowanie</h2>
+            <h3 class="data"> <!-- from API --></h3>
+            <div class="numbers"> <!-- from API --> </div>
+        </div>
+        <div class="ball-box"></div>
+        <div class="list">
+            <h1 class="list-title">Twoje numery</h1>
+            <i class="cross flaticon-close"></i>
+        </div>
+        <div class="button-container">
+            <button class="button" id="draw-button">Losuj</button>
+            <button class="button" id="reset-button">Resetuj</button>
+            <button class="button" id="list-button">Lista</button>
+        </div>
     </div>
-	<div class="button-container">
-        <button class="button" id="draw-button">Draw</button>
-        <button class="button" id="reset-button">Reset</button>
-        <button class="button" id="list-button">Open list</button>
-    </div>
-    <div class="photo-layer">
+   
 
-    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="script.js"></script>
