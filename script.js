@@ -13,11 +13,9 @@ function fetchAPI() {
 	fetch(url)
 		.then(response => response.json())
 		.then(response => {
-
 			const {Lotto: {numerki: numbers, data_losowania:data}} = response;
 			let convertedNumber = numbers.split(",").map(number => parseInt(number))
 			$('.data').html(`${data.substr(0, 10)}`)
-
 			convertedNumber.forEach(number => {
 				responseNumbers.push(number);
 				const ball = $('<div>').addClass('ball ball-modifier').html(number)
@@ -107,11 +105,12 @@ function listButton() {
 		$('.list').slideToggle(1500, 'easeOutBounce')
 	}); 
 }
-
+fetchAPI()
 addBalls(49);
 
 // listeners
+
 drawButton();
 resetButton();
 listButton();
-fetchAPI()
+
